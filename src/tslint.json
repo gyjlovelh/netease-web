@@ -12,6 +12,8 @@
             "element",
             "nte",
             "kebab-case"
-        ]
+        ],
+        "no-trailing-whitespace": false,
+        "no-inferrable-types": false
     }
 }
