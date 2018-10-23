@@ -1,0 +1,107 @@
+.header-wrap {
+    position: relative;
+    z-index: 1000;
+    height: 70px;
+    box-sizing: border-box;
+    background: #040303;
+    border-bottom: 1px solid #000;
+
+    .header-inner {
+        width: 1100px;
+        margin: 0 auto;
+
+        .logo, .user {
+            background: url("/src/assets/img/topbar.png") no-repeat 0 9999px;
+        }
+
+        .logo {
+            margin: 0;
+            float: left;
+            width: 176px;
+            height: 69px;
+            background-position: 0 0;
+
+            a {
+                float: left;
+                width: 157px;
+                height: 100%;
+                padding-right: 20px;
+                text-indent: -9999px;
+            }
+        }
+
+        .item {
+            display: inline-block;
+            line-height: 69px;
+            color: #fff;
+            font-size: 14px;
+            padding: 0 15px;
+        }
+
+        .user {
+            float: right;
+            position: relative;
+            height: 45px;
+            margin: 19px 0 0 20px;
+            padding: 0 22px 0 0;
+            background-position: right -47px;
+
+            .cover {
+                width: 30px;
+                height: 30px;
+
+                .no-login {
+                    display: block;
+                    width: 28px;
+                    margin-top: 7px;
+                    color: #787878;
+                    font-weight: bold;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 99px;
+                }
+            }
+
+            .u-list {
+                position: absolute;
+                top: 25px;
+                right: -43px;
+                width: 158px;
+                padding: 0;
+                list-style: none;
+                background: #2b2b2b;
+                border: 1px solid #202020;
+                box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+                border-radius: 4px;
+
+                li {
+                    a {
+                        position: relative;
+                        display: block;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                        padding-left: 24px;
+                        color: #ccc;
+                        height: 34px;
+                        line-height: 34px;
+                        text-decoration: none;
+
+                        &:hover {
+                            background: #353535;
+                            text-decoration: none;
+                            color: #fff;
+                        }
+
+                        .netease-top-icn {
+                            float: left;
+                            margin: 7px 10px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

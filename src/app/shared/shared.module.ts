@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PlayerComponent} from './component/player/player.component';
 import {NeteaseCommonModule} from '@netease/common';
+import {HeaderComponent} from './component/header/header.component';
 
 
 @NgModule({
@@ -13,10 +14,12 @@ import {NeteaseCommonModule} from '@netease/common';
         NeteaseCommonModule
     ],
     declarations: [
-        PlayerComponent
+        PlayerComponent,
+        HeaderComponent
     ],
     exports: [
-        PlayerComponent
+        PlayerComponent,
+        HeaderComponent
     ],
 })
 

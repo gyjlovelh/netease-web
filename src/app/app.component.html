@@ -1,13 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<router-outlet></router-outlet>
+<nte-header></nte-header>
 
-<netease-normal-cover
-    [title]="'歌单title'"
-    [size]="60"
-    [navigateUrl]="'/user/demo'"
-    [imageUrl]="'http://p1.music.126.net/fi2d8aD5QakQh7v_1rSaeg==/18780758116182294.jpg?param=60y60'">
-
-</netease-normal-cover>
+<div class="content-wrap">
+    <router-outlet></router-outlet>
+</div>
 
 <nte-player></nte-player>

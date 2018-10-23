@@ -1,5 +1,4 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -8,10 +7,13 @@ import {NeteaseCommonModule} from '@netease/common';
 import {RouterModule} from '@angular/router';
 import {ROUTER_CONFIG} from './app.routes';
 import {SharedModule} from './shared/shared.module';
+import {CommonModule} from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
-        BrowserModule,
+        CommonModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
         NgZorroAntdModule,
