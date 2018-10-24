@@ -6,6 +6,7 @@ import {CommonModule} from '@angular/common';
 import {PlayerComponent} from './component/player/player.component';
 import {NeteaseCommonModule} from '@netease/common';
 import {HeaderComponent} from './component/header/header.component';
+import {DurationPipe} from './pipe/duration.pipe';
 
 
 @NgModule({
@@ -15,11 +16,13 @@ import {HeaderComponent} from './component/header/header.component';
     ],
     declarations: [
         PlayerComponent,
-        HeaderComponent
+        HeaderComponent,
+        DurationPipe
     ],
     exports: [
         PlayerComponent,
-        HeaderComponent
+        HeaderComponent,
+        DurationPipe
     ],
 })
 

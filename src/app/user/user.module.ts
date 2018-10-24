@@ -11,19 +11,23 @@ import {HomeComponent} from './home/home.component';
 import {NeteaseCommonModule} from '@netease/common';
 import {FollowsComponent} from './follows/follows.component';
 import {FansComponent} from './fans/fans.component';
+import {UpdateComponent} from './update/update.component';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
         NeteaseCommonModule,
+        NgZorroAntdModule,
         RouterModule.forChild(ROUTER_CONFIG)
     ],
     declarations: [
         UserComponent,
         HomeComponent,
         FollowsComponent,
-        FansComponent
+        FansComponent,
+        UpdateComponent
     ]
 })
 

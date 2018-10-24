@@ -3,7 +3,7 @@
  */
 
 
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ProgressBarService} from './progress-bar.service';
 import {PlayerService} from './player.service';
 
@@ -19,13 +19,31 @@ import {PlayerService} from './player.service';
 
 export class PlayerComponent implements OnInit {
 
+    mSource: string;
+
+    currentTime: number;
+    duration: number;
+
+    @ViewChild('audioElement') private audioElement: any;
+    @ViewChild('bar') private bar: any;
+    @ViewChild('cur') private cur: any;
+    @ViewChild('icon') private icon: any;
+
     constructor(
         private $progressService: ProgressBarService,
         private $playerService: PlayerService
     ) {}
 
     ngOnInit() {
+        this.$playerService.initAudioElement(this.audioElement);
+        this.$playerService.initProgressElement(this.bar, this.cur, this.icon);
 
+        this.$playerService.canplay.subscribe(data => {
+            this.duration = data;
+        });
+        this.$playerService.timeupdate.subscribe(data => {
+            this.currentTime = data;
+        });
     }
 
     handlePrev() {
@@ -33,10 +51,12 @@ export class PlayerComponent implements OnInit {
     }
 
     handlePlay() {
-
+        this.$playerService.playOrPause();
     }
 
     handleNext() {
 
     }
+
+
 }

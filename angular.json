@@ -46,8 +46,9 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "./node_modules/@netease/theme/netease-theme.css",
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+                            "node_modules/@netease/theme/netease-theme.css"
                         ],
                         "scripts": []
                     },

@@ -2,7 +2,10 @@
     <div class="player-main">
         <div class="btns">
             <a class="netease-playbar playbar-prev" (click)="handlePrev()"></a>
-            <a class="netease-playbar playbar-play" (click)="handlePlay()"></a>
+            <a class="netease-playbar"
+               [class.playbar-play]="audioElement.paused"
+               [class.playbar-pause]="!audioElement.paused"
+               (click)="handlePlay()"></a>
             <a class="netease-playbar playbar-next" (click)="handleNext()"></a>
         </div>
         <div class="flag">
@@ -21,14 +24,14 @@
                 <a class="author">陈一发儿</a>
             </div>
             <div class="p-bar">
-                <div class="bar-bg">
-                    <div class="cur" style="width: 30%">
-                        <span class="netease-icon netease-icon-alpha"></span>
+                <div #bar class="bar-bg">
+                    <div #cur class="cur">
+                        <span #icon class="netease-icon netease-icon-alpha"></span>
                     </div>
                 </div>
                 <span class="time">
-                    <em>00:00</em>
-                    / 04:06
+                    <em>{{currentTime | duration}}</em>
+                    / {{duration | duration}}
                 </span>
             </div>
         </div>
@@ -48,3 +51,10 @@
         </div>
     </div>
 </div>
+
+<audio #audioElement controls="controls">
+    <source src="/src/assets/demo3.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+

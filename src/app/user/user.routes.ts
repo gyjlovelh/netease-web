@@ -6,6 +6,7 @@ import {UserComponent} from './user.component';
 import {HomeComponent} from './home/home.component';
 import {FollowsComponent} from './follows/follows.component';
 import {FansComponent} from './fans/fans.component';
+import {UpdateComponent} from './update/update.component';
 
 export const ROUTER_CONFIG: Routes = [
     {path: '', component: UserComponent,
@@ -15,4 +16,5 @@ export const ROUTER_CONFIG: Routes = [
             {path: 'fans', component: FansComponent}
         ]
     },
+    {path: 'update', component: UpdateComponent}
 ];
